@@ -23,6 +23,7 @@
     "baseUrl": "src",
     "noImplicitAny": true,
     "noImplicitThis": true,
+    "downlevelIteration": true,
     "strictNullChecks": true
   },
   "include": [
