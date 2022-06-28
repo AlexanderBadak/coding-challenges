@@ -1,4 +1,4 @@
-import { validParenthesisV1 as validParenthesis } from './valid-parenthesis'
+import { validParenthesisV1Refactored as validParenthesis } from './valid-parenthesis'
 
 describe('Valid Parenthesis', () => {
     test('case 1', () => {
@@ -23,5 +23,13 @@ describe('Valid Parenthesis', () => {
 
     test('case 6', () => {
         expect(validParenthesis('([{}()[]})')).toBe(false)
+    })
+
+    test('case 7', () => {
+        expect(validParenthesis(')')).toBe(false)
+    })
+
+    test('case 8', () => {
+        expect(validParenthesis('([)]')).toBe(false)
     })
 })
