@@ -57,20 +57,17 @@ export const validParenthesisV1 = (s: string) : boolean => {
         }
     }
 
-    const openingQueue: TParenthesisPair[] = []
+    const openingStack: TParenthesisPair[] = []
 
     for (let i = 0; i < s.length; i++) {
         const opening = getOpening(s[i])
 
         if (opening) {
-            openingQueue.push(opening)
+            openingStack.push(opening)
         } else {
-            if (!openingQueue.length) return false
-
-            const lastQueueItem = openingQueue.pop()
-            if (lastQueueItem) {
-                if (lastQueueItem.close !== s[i]) return false
-            }
+            const lastItem = openingStack.pop()
+            if (!lastItem) return false
+            if (lastItem.close !== s[i]) return false
         }
     }
 

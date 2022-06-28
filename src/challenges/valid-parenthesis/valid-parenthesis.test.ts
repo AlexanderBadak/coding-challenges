@@ -20,4 +20,8 @@ describe('Valid Parenthesis', () => {
     test('case 5', () => {
         expect(validParenthesis('([{}()[]])')).toBe(true)
     })
+
+    test('case 6', () => {
+        expect(validParenthesis('([{}()[]})')).toBe(false)
+    })
 })
