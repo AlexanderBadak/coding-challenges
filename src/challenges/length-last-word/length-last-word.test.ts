@@ -29,11 +29,15 @@ describe('length last word', () => {
         expect(lengthLastWord('   fly me   to   the moon  ')).toBe(4)
     })
 
-    test('case 1', () => {
+    test('case 2', () => {
         expect(lengthLastWord('Hello World')).toBe(5)
     })
 
-    test('case 1', () => {
+    test('case 3', () => {
         expect(lengthLastWord('luffy is still joyboy')).toBe(6)
+    })
+
+    test('case 4', () => {
+        expect(lengthLastWord('test')).toBe(4)
     })
 })
