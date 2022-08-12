@@ -4,7 +4,9 @@
   "description": "common challenges",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "outdated": "npm outdated",
+    "update": "npm update"
   },
   "author": "",
   "license": "ISC",

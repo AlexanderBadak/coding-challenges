@@ -19,7 +19,7 @@ import { longPressedV1 as longPressed } from './long-pressed'
 
 describe('long pressed', () => {
     test('case 1', () => {
-        expect(longPressed('alex', 'aaleex')).toBe(true)
+        expect(longPressed('alex', 'aleex')).toBe(true)
     })
     test('case 2', () => {
         expect(longPressed('saeed', 'ssaaedd')).toBe(false)
@@ -39,4 +39,11 @@ describe('long pressed', () => {
     test('case 7', () => {
         expect(longPressed('laiden', 'laid')).toBe(false)
     })
+    test('case 8', () => {
+        expect(longPressed('alex', 'abbleex')).toBe(false)
+    })
+    test('case 9', () => {
+        expect(longPressed('alex', 'ale')).toBe(false)
+    })
 })
+

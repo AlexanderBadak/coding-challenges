@@ -24,4 +24,8 @@ describe('Longest Unique Characters', () => {
     test('limshady is the longest substring', () => {
         expect(longestUniqueString('mynameisslimshady')).toBe(8)
     })
+
+    test('b is the longest substring', () => {
+        expect(longestUniqueString('bbbbbb')).toBe(1)
+    })
 })
