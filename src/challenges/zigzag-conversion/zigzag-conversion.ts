@@ -1,26 +1,19 @@
+//https://www.youtube.com/watch?v=Q2Tw6gcVEwc
 export const zigzagConversionV1 = (s: string, numRows: number) : string => {
-    const returnArr: string[] = new Array(s.length)
+    if (numRows === 1) return s
 
-    returnArr.push(s[0])
+    let returnStr: string = ''
 
-    for (let i = numRows + 1; i < s.length; i++) {
-        if (i % (numRows + 1) === 0) {
-            returnArr.push(s[i])
+    for (let r = 0; r < numRows; r++) {
+        const increment = 2 * (numRows - 1)
+        for (let i = r; i < s.length; i += increment) {
+            returnStr += s[i]
+            if (r > 0 && r < numRows - 1 && i + increment - 2 * r < s.length) {
+                returnStr += s[i + increment - 2 * r]
+            }
         }
+
     }
 
-    for (let i = 1; i < s.length; i++) {
-        if ((i - 1) % 2 === 0)
-            returnArr.push(s[i])
-    }
-
-    returnArr.push(s[2])
-
-    for (let i = numRows; i < s.length; i++) {
-        if ((i - 2) % (numRows + 1) === 0) {
-            returnArr.push(s[i])
-        }
-    }
-
-    return returnArr.join('')
+    return returnStr
 }
