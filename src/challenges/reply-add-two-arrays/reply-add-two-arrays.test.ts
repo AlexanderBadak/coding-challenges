@@ -1,4 +1,4 @@
-import { addTwoArraysV1 as addTwoArrays } from './reply-add-two-arrays'
+import { addTwoArraysRefactoredV2 as addTwoArrays } from './reply-add-two-arrays'
 
 //Write a method that takes two integer arrays of any length as parameters and returns  the sum of the arrays as a single array
 
