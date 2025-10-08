@@ -21,6 +21,6 @@ describe('Debounce', () => {
 
         jest.runOnlyPendingTimers()
 
-        expect(callback).toBeCalledTimes(1)
+        expect(callback).toHaveBeenCalledTimes(1)
     })
 })
