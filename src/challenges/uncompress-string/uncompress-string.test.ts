@@ -9,7 +9,7 @@
 // inputs are guaranteed to be valid input like above example, 
 // there is no numerical digit in original form.
 
-import { uncompressStringV1 as uncompressString} from "./uncompress-string"
+import { uncompressStringV2 as uncompressString} from "./uncompress-string"
 
 describe('uncompress string', () => {
     const testParams = [

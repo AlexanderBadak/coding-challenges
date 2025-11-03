@@ -92,3 +92,27 @@ export const uncompressStringV1 = (s: string) => {
 
     return finalStr
 }
+
+
+export const uncompressStringV2 = (s: string) => {
+    const stack = ['']
+    const count = []
+    let n = ''
+    for (let i = 0; i < s.length; i++) {
+        const char = s[i]
+        if (/\d/.test(char)) {
+            n += char
+        } else if (char === '(') {
+        stack.push('')
+        count.push(Number(n));
+        n = ''
+        } else if (char === ')') {
+            const sequence = stack.pop()
+            const times = count.pop()
+            stack.push(stack.pop() + sequence!.repeat(times!))
+        } else {
+            stack.push(stack.pop() + char)
+        }
+    }
+    return stack.pop()  
+}
